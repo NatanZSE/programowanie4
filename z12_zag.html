@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div style="color: green;font-size: 50px;">
+            <script>
+                function okno_zamknij()
+                {
+                    window.close()
+                }
+                var D1_zag=prompt("D1=","");
+                var G1_zag=prompt("G1=","");
+                var D2_zag=prompt("D2=","");
+                var G2_zag=prompt("G2=","");
+                var roznicad;
+                var roznicag;
+                var a=parseFloat(D1_zag);
+                var b=parseFloat(G1_zag);
+                var c=parseFloat(D2_zag);
+                var d=parseFloat(G2_zag);
+                if(D1_zag>=D2_zag && G1_zag>=G2_zag)
+                {
+                    roznicad=D1_zag-D2_zag;
+                    roznicad=roznicad*86400;
+                    roznicag=G1_zag-G2_zag;
+                    roznicag=roznicag*3600;
+                }
+                var roznicadg;
+                roznicadg=roznicad+roznicag;
+                document.write("D1="+a+"<br>"+"G1="+b+"<br>"+"D2="+c+"<br>"+" G2="+d+"<br>"+"ilosc sekund= "+roznicadg+" sekund" + "<br>");
+            </script>
+        </div>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </body>
+</html>
