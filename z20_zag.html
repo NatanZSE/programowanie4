@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-image: linear-gradient(#000, #000, #80F, #0FF);
+                color: #FFF;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h1 {
+                color: red;
+                font-size: 2cm;
+                margin: 2px;
+                top: 10px;
+                left: 18px;
+                font-weight: bold;
+                text-shadow: #FFF 3px 3px 3px;
+            }
+            input{color: #FFF;
+                margin: 4px;
+                background-color: red;
+                padding: 15px 13px;
+                font-size: 14px;
+                box-shadow: #FFF 3px 3px 3px;
+                border-radius: 8px;
+                height: 50px;
+                align-items: center;
+            }
+            #odpowiedz{
+                color: red;
+                font-size: 50px;
+                text-shadow: #FFF 2px 2px 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function AB_zag() {
+             let aX_zag = parseFloat(document.getElementById('aX').value);
+             let aY_zag = parseFloat(document.getElementById('aY').value);
+             let bX_zag = parseFloat(document.getElementById('bX').value);
+             let bY_zag = parseFloat(document.getElementById('bY').value);
+              document.getElementById("odpowiedz").innerHTML = "AB= "
+                + (Math.sqrt((aX_zag - bX_zag) ** 2 + (aY_zag - bY_zag) ** 2)).toFixed(2);
+            }
+        
+          function BC_zag() {
+             let bX_zag = parseFloat(document.getElementById('bX').value);
+             let bY_zag = parseFloat(document.getElementById('bY').value);
+             let cX_zag = parseFloat(document.getElementById('cX').value);
+             let cY_zag = parseFloat(document.getElementById('cY').value);
+              document.getElementById("odpowiedz").innerHTML = "BC= "
+                + (Math.sqrt((bX_zag - cX_zag) ** 2 + (cY_zag - cY_zag) ** 2)).toFixed(2);
+            }
+        
+        function AC_zag() {
+             let aX_zag = parseFloat(document.getElementById('bX').value);
+             let aY_zag = parseFloat(document.getElementById('bY').value);
+             let cX_zag = parseFloat(document.getElementById('cX').value);
+             let cY_zag = parseFloat(document.getElementById('cY').value);
+              document.getElementById("odpowiedz").innerHTML = "AC= "
+                + (Math.sqrt((aX_zag - cX_zag) ** 2 + (aY_zag - cY_zag) ** 2)).toFixed(2);
+            }
+        </script>
+        <h1>ZADANIE 20 ZAGDAŃSKI</h1><br><br>
+          Podaj X punktu A: <input type="text" id="aX"><br>
+          Podaj Y punktu A: <input type="text" id="aY"><br>
+          Podaj X punktu B: <input type="text" id="bX"><br>
+          Podaj Y punktu B: <input type="text" id="bY"><br>
+          Podaj X punktu C: <input type="text" id="cX"><br>
+          Podaj Y punktu C: <input type="text" id="cY"><br>
+        <input type="button" value="Oblicz AB" Onclick="AB_zag()"><br><br>
+        <input type="button" value="Oblicz BC" Onclick="BC_zag()"><br><br>
+        <input type="button" value="Oblicz AC" Onclick="AC_zag()"><br><br>
+        <div id="odpowiedz"></div>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            table, th, td {
+                border: 1px solid;
+            }
+            textarea {
+                width: 75%;
+                height: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>
+            1.Wymień cztery sposoby wyprowadzania danych w JS
+        </h3>
+        <ul>
+            <li>
+                z użyciem dokument.write()
+            </li>
+            <li>
+                z użyciem okienka alert()
+            </li>
+            <li>
+                do okienek formularza
+            </li>
+            <li>
+                do tabeli
+            </li>
+        </ul>
+        <h3>
+            2.Czym jest funkcja w JS, omów przy użyciu 4 podpunktów?
+        </h3>
+        <ul>
+            <li>
+                Jest to zbiór zgrupowanych instrukcji, które możemy uruchamiać poprzez podanie ich nazwy
+            </li>
+            <li>
+                Każda funkcja po wywołaniu wykonuje swój wewnętrzny kod
+            </li>
+            <li>
+                Funkcja może mieć argumenty, które wchodzą do wnętrza funkcji i są tam przetwarzane np. suma_kry(a, b)
+            </li>
+            <li>
+                Może(nie zawsze) zwrócić obliczoną wartość zapisaną po słowie kluczowym return
+            </li>
+        </ul>
+        <h3>
+            3.Omówienie metod getElementsByName, getElementById, getElementByTagName:
+        </h3>
+        <table>
+            <tr>
+                <th>
+                    Metoda
+                </th>
+                <th>
+                    opis
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    getElementById("id ")
+                </td>
+                <td>
+                    dostęp do wszystkich elementów o konkretnej wartości atrybutu id
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    getElementByTagName("znacznik ")
+                </td>
+                <td>
+                    dostęp do wszystkich elementów o typie znacznika, np. P lub DIV
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    getElementByName("nazwa")
+                </td>
+                <td>
+                    dostęp do wszystkich elementów o konkretnej wartości atrybutu
+                </td>
+            </tr>
+        </table>
+        <h3>
+            4.Właściwości tak pobranego elementu to:
+        </h3>
+        <ul>
+            <li>
+                innerHTML – jest to właściwość, która umożliwia odczyt, zmodyfikowanie, wstawienie, albo usunięcie kodu HTML z danego elementu HTML np. w tabeli
+            </li>
+            <li>
+                innerText – umożliwia określenie ciągu znaków który zostanie umieszczony w elemencie
+            </li>
+            <li>
+                className – umożliwia określenie klasy CSS użytej do prezentacji elementu
+            </li>
+        </ul>
+        <textarea>
+<!DOCTYPE html>
+    <head>
+        <title> Przykłady dostępu do elementów </title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            .wyroznienieCzerwone { color: Red; font-weight: 600; }
+        </style>
+    </head>
+    <body>
+        <div id="nazwa"></div>
+            <script>
+                document.getElementById("nazwa").innerHTML = "Witaj";
+                document.getElementById("nazwa").className = "wyroznienieCzerwone";
+            </script>
+    </body>
+        </textarea>
+    </body>
+</html>
