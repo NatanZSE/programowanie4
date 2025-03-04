@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>KOD DO ZADANIA 25</h1>
+		<textarea style="width: 98%; height: 300px;">
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       
+        var No = parseFloat(prompt("Podaj ilość początkową atomów (No) [sztuk]:"));
+        var t = parseFloat(prompt("Podaj czas (t) [rok]:"));
+        var T1_2 = parseFloat(prompt("Podaj okres połowicznego zaniku (T1/2) [rok]:"));
+        
+        var lambda = Math.LN2 / T1_2;
+        var N = No * Math.exp(-lambda * t);
+
+        var formattedLambda = lambda.toFixed(7);
+
+        document.write("<span style='color: blue;'>N<sub>0</sub> = " +No+ " [sztuk]<br>");
+        document.write("t = " +t+ " [lat]<br>");
+        document.write("T<sub>1/2</sub> = " +T1_2 + " [lat]<br>");
+        document.write("Lambda = " +formattedLambda+ " [1/rok]<br>");
+        document.write("N = " + N + " [sztuk]</span>");
+    </script>
+</body>
+</html>
+        </textarea>
+    </body>
+</html>	

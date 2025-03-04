@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-image: linear-gradient(#000, #000, #80F, #0FF);
+            color: #FFF;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 98%;
+        }
+        h1 {
+            color: red;
+            font-size: 2cm;
+            margin: 2px;
+            top: 10px;
+            left: 18px;
+            font-weight: bold;
+            text-shadow: #FFF 3px 3px 3px;
+        }
+        input{color: #FFF;
+            margin: 4px;
+            background-color: red;
+            padding: 15px 13px;
+            font-size: 14px;
+            box-shadow: #FFF 3px 3px 3px;
+            border-radius: 8px;
+            height: 50px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        function oblicz(odl_kow, s_kow) {
+            var odl_zag = parseFloat(odl_kow);
+            var s_zag = parseFloat(s_kow);
+
+            var alfa = kat_zag(odl_zag, s_zag);
+           
+            var h_kow = h_zag(odl_zag, s_zag);
+           
+            document.getElementsByName('alfa')[0].value = alfa.toFixed(2);
+            document.getElementsByName('dlugosc')[0].value = h_kow.toFixed(2);
+        }
+
+        function kat_zag(odl_zag, s_zag) {
+            var alfa = Math.atan(odl_zag / s_zag) * (180 / Math.PI);
+            return alfa;
+        }
+
+        function h_zag(odl_zag, s_zag) {
+            var V_wynik = odl_zag * odl_zag + s_zag * s_zag;
+            var wynik = Math.sqrt(V_wynik);
+            return wynik;
+        }
+    </script>
+    <h1>
+        ZADANIE 27
+    </h1>
+    <br><br>
+    <form name="formularz" onsubmit="oblicz(this.odleglosc.value, this.droga.value); return false;">
+        Podaj odległość pomiędzy Arturem i Dawidem: <input size="6" id="odleglosc"><br><br>
+        Podaj drogę, na której samolot znajduje się pionowo nad Dawidem: <input size="6" id="droga"><br><br>
+        <input type="submit" value="Oblicz">
+        <br><br>
+        Samolot pod pewnym kątem od Artura: <input size="6" name="alfa">
+        Wysokość (h): <input size="6" name="dlugosc">
+    </form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-image: linear-gradient(#000, #000, #80F, #0FF);
+                color: #FFF;
+                font-family: Arial, Helvetica, sans-serif;
+                height: 98%;
+            }
+            h1 {
+                color: red;
+                font-size: 2cm;
+                margin: 2px;
+                top: 10px;
+                left: 18px;
+                font-weight: bold;
+                text-shadow: #FFF 3px 3px 3px;
+            }
+            input{color: #FFF;
+                margin: 4px;
+                background-color: red;
+                padding: 15px 13px;
+                font-size: 14px;
+                box-shadow: #FFF 3px 3px 3px;
+                border-radius: 8px;
+                height: 50px;
+                align-items: center;
+            }
+        </style>
+        <script language="JavaScript">
+            function oblicz(d, x) {
+                d_liczba = parseFloat(d);
+                x_liczba = parseFloat(x);
+                V_wynik = d_liczba * d_liczba + x_liczba * x_liczba;
+                wynik = Math.sqrt(V_wynik);
+                document.getElementsByName('dlugosc')[0].value = wynik.toFixed(2);
+    
+                alfa = Math.atan(d_liczba / x_liczba) * (180 / Math.PI);
+                document.getElementsByName('alfa')[0].value = alfa.toFixed(2);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            ZADANIE 23
+        </h1>
+        <br><br>
+        <form name="formularz" onsubmit="oblicz(this.wysokosc.value, this.odleglosc.value); return false;">
+            Podaj d=<input size="6" name="wysokosc">
+            Podaj x=<input size="6" name="odleglosc"><br><br>
+            <input type="submit" value="Oblicz">
+            <br><br>
+            Drabina=<input size="6" name="dlugosc">
+            Alfa=<input size="6" name="alfa">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>KOD DO ZADANIA 26</h1>
+		<textarea style="width: 98%; height: 300px;">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-image: linear-gradient(#000, #000, #80F, #0FF);
+                color: #FFF;
+                font-family: Arial, Helvetica, sans-serif;
+                height: 98%;
+            }
+            h1 {
+                color: red;
+                font-size: 2cm;
+                margin: 2px;
+                top: 10px;
+                left: 18px;
+                font-weight: bold;
+                text-shadow: #FFF 3px 3px 3px;
+            }
+            input{color: #FFF;
+                margin: 4px;
+                background-color: red;
+                padding: 15px 13px;
+                font-size: 14px;
+                box-shadow: #FFF 3px 3px 3px;
+                border-radius: 8px;
+                height: 50px;
+                align-items: center;
+            }
+            #odpowiedz{
+                color: red;
+                font-size: 50px;
+                text-shadow: #FFF 2px 2px 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function Obw_zag(parametry){
+                var a_zag= parseFloat(document.getElementById('a').value);
+                var b_zag= parseFloat(document.getElementById('b').value);
+                var c_zag= parseFloat(document.getElementById('c').value);
+                var result2= a_zag+b_zag+(2*c_zag);
+                document.getElementById("odpowiedz").innerHTML = "Obwód = "+result2.toFixed(2)+" cm";
+            }
+
+            function Pow_zag(parametry){
+                var a_zag = parseFloat(document.getElementById('a').value);
+                var b_zag= parseFloat(document.getElementById('b').value);
+                var h_zag= parseFloat(document.getElementById('h').value);
+                var result1 = (a_zag+b_zag) * h_zag/2;
+                document.getElementById("odpowiedz").innerHTML = "Pole = "+result1.toFixed(2)+" cm^2";
+            }
+        </script>
+        <h1>
+            ZADANIE 26
+        </h1>
+        <br><br>
+        Podaj punkt A: <input type="text" id="a"><br>
+        Podaj punkt B: <input type="text" id="b"><br>
+        Podaj punkt c: <input type="text" id="c"><br>
+        Podaj wysokosc (h): <input type="text" id="h"><br>
+        <input type="button" value="Oblicz obwod" Onclick="Obw_zag()"><br><br>
+        <input type="button" value="Oblicz pole" Onclick="Pow_zag()"><br><br>
+        <div id="odpowiedz"></div>
+    </body>
+</html>
+        </textarea>
+    </body>
+</html>	

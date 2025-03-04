@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function wierzowiec(pietra_k, mieszkania_k, wejscia_k){
+                this.pietra=pietra_k;
+                this.mieszkania=mieszkania_k;
+                this.wejscia=wejscia_k;
+            }
+            wierzowiec.prototype.wypisz = function(){
+                alert(this.pietra+' '+this.mieszkania+' '+this.wejscia);
+            };
+            var budynek1 = new wierzowiec("dziesec", "piecdziesiat", "dwa");
+            var budynek2 = new wierzowiec("cztery", "dwadziescia", "jedno");
+            budynek1.wypisz();
+            budynek2.wypisz();
+
+        </script>
+    </head>
+    <body>
+        <br><br>
+        Programowanie obiektowe. <br><br>
+        Obiekt to wierzowiec<br>
+        Pola:<br>
+        pietra<br>
+        mieszkania<br>
+        wejscia<br>
+    </body>
+</html>

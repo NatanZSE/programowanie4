@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>KOD DO ZADANIA 24</h1>
+		<textarea style="width: 98%; height: 300px;">
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: silver;
+            color: blue;
+            height: 98%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var x1_zag = parseFloat(prompt("Podaj x1 w stopniach:"));
+        var x2_zag = parseFloat(prompt("Podaj x2 w stopniach:"));
+
+        document.write("x1=" + x1_zag + "&emsp;&emsp; x2=" + x2_zag + "<br>");
+        document.write("x1=" + x1_zag + "&emsp;&emsp; x1=" + (x1_zag * Math.PI / 180).toFixed(2));
+
+        var y1 = (3 * x1_zag / (6/ 6 + 2)).toFixed(2);
+        var y2 = (2 * Math.cos(x1_zag * Math.PI / 180) + 3 * Math.sin(x1_zag * Math.PI / 180)).toFixed(2);
+        var y3 = (Math.cbrt(Math.pow(x1_zag, 5) + 2 * Math.pow(x2_zag, 4)) * Math.abs(x1_zag - x2_zag)).toFixed(2);
+
+        document.write("<br>");
+        document.write("y1=" + y1 + "<br>");
+        document.write("y2=" + y2 + "<br>");
+        document.write("y3=" + y3 + "<br>");
+    </script>
+</body>
+</html>
+        </textarea>
+    </body>
+</html>	
