@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Zadanie 37</title>
+    </head>
+    <body>
+        <div style="font-family: Arial, Helvetica, sans-serif;font-size:20pt;">
+            <script>
+                var rok_zag= {
+                    rok:"1995"
+                }
+                var x_zag=prompt("Od którego roku język JavaScript w uzyciu?","");
+                document.write("Wczytany rok: "+x_zag+"<br>");
+                if(x_zag==1995){
+                    document.write("<font color=green>Gratulacje! Od wtedy używa się JavaScript!</font>"+"<br>");
+                }
+                else if(x_zag < 2000 && x_zag > 1990){
+                    document.write("<font color=yellow>"+"Blisko, ale to nie ten rok :)"+"<br>");
+                }
+                else{
+                    document.write("<font color=red>Niestety nie jest to poprawny rok :(</font>"+"<br>");
+                }
+            </script>
+        </div>
+    </body>
+</html>
